@@ -7,20 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-    private Button button_inicio;
+public class MenuActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_menu);
 
-        button_inicio = findViewById(R.id.button_inicio);
-
-        button_inicio.setOnClickListener(new View.OnClickListener() {
+        Button buttonCronometro = findViewById(R.id.buttonCronometro);
+        buttonCronometro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(MainActivity.this, registro.class);
+                Intent intent = new Intent(MenuActivity.this, CronometroActivity.class);
                 startActivity(intent);
             }
         });
