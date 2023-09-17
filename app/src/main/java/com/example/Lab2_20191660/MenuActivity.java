@@ -15,10 +15,20 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         Button buttonCronometro = findViewById(R.id.buttonCronometro);
+        Button buttonContador = findViewById(R.id.buttonContador);
+
         buttonCronometro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this, CronometroActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonContador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, ContadorActivity.class);
                 startActivity(intent);
             }
         });
